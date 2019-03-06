@@ -1,0 +1,74 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@npm_bazel_karma//:defs.bzl", "ts_web_test_suite")
+load("@npm_bazel_typescript//:defs.bzl", "ts_library")
+load("@io_bazel_rules_sass//sass:sass.bzl", "sass_binary")
+load("@npm_angular_bazel//:index.bzl", "ng_module", "ng_package")
+
+sass_binary(
+    name = "hello-world-styles",
+    src = "hello-world.component.scss",
+)
+
+ng_module(
+    name = "hello-world",
+    srcs = glob(
+        ["*.ts"],
+        exclude = ["*.spec.ts"],
+    ),
+    assets = [":hello-world-styles"],
+    deps = [
+        "@npm//@angular/core",
+        "@npm//@types",
+    ],
+)
+
+ng_package(
+    name = "npm_package",
+    entry_point = "src/hello-world/index.js",
+    deps = [":hello-world"],
+)
+
+ts_library(
+    name = "test_lib",
+    testonly = 1,
+    srcs = glob(["*.spec.ts"]),
+    deps = [
+        ":hello-world",
+        "@npm//@angular/core",
+        "@npm//@angular/platform-browser",
+        "@npm//@angular/platform-browser-dynamic",
+        "@npm//@types",
+        "@npm//jasmine",
+    ],
+)
+
+ts_web_test_suite(
+    name = "test",
+    srcs = [
+        "@npm//node_modules/@angular/common:bundles/common.umd.js",
+        "@npm//node_modules/@angular/compiler:bundles/compiler.umd.js",
+        "@npm//node_modules/@angular/compiler:bundles/compiler-testing.umd.js",
+        "@npm//node_modules/@angular/core:bundles/core.umd.js",
+        "@npm//node_modules/@angular/core:bundles/core-testing.umd.js",
+        "@npm//node_modules/@angular/platform-browser:bundles/platform-browser.umd.js",
+        "@npm//node_modules/@angular/platform-browser:bundles/platform-browser-testing.umd.js",
+        "@npm//node_modules/@angular/platform-browser-dynamic:bundles/platform-browser-dynamic.umd.js",
+        "@npm//node_modules/@angular/platform-browser-dynamic:bundles/platform-browser-dynamic-testing.umd.js",
+        "@npm//node_modules/tslib:tslib.js",
+    ],
+    bootstrap = [
+        "@npm//node_modules/zone.js:dist/zone-testing-bundle.js",
+        "@npm//node_modules/reflect-metadata:Reflect.js",
+    ],
+    browsers = [
+        "@io_bazel_rules_webtesting//browsers:chromium-local",
+        # TODO(gregmagolan): re-enable firefox testing once fixed
+        # See https://github.com/bazelbuild/rules_typescript/issues/296
+        # "@io_bazel_rules_webtesting//browsers:firefox-local",
+    ],
+    deps = [
+        ":test_lib",
+        "//src:rxjs_umd_modules",
+    ],
+)
