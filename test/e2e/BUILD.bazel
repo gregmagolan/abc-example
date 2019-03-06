@@ -5,7 +5,6 @@ ts_library(
     name = "e2e",
     testonly = 1,
     srcs = ["app.spec.ts"],
-    tsconfig = ":tsconfig.json",
     deps = [
         "@npm//@types",
         "@npm//protractor",
@@ -16,7 +15,6 @@ ts_library(
     name = "ts_on_prepare",
     testonly = 1,
     srcs = ["on-prepare.ts"],
-    tsconfig = ":tsconfig.json",
     deps = [
         "@npm//@angular/bazel",
         "@npm//@types",

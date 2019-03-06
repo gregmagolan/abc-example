@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 
 import {AppComponent} from './app.component';
 import {HelloWorldModule} from './hello-world/hello-world.module';
+import {MaterialModule} from './material/material.module';
 
 @NgModule({
-  imports: [CommonModule, BrowserModule, HttpClientModule, HelloWorldModule],
+  imports: [CommonModule, BrowserModule, HelloWorldModule, MaterialModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
