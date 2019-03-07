@@ -10,6 +10,9 @@
     "experimentalDecorators": true,
     "types": []
   },
+  "angularCompilerOptions": {
+    "enableSummariesForJit": true
+  },
   "include": [
     "node_modules/@angular/**/*",
     "node_modules/@ngrx/**/*"
