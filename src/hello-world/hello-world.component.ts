@@ -11,5 +11,5 @@ import {Component, NgModule} from '@angular/core';
   styleUrls: ['./hello-world.component.css'],
 })
 export class HelloWorldComponent {
-  name: string = 'world';
+  name: string = 'World';
 }
