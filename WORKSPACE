@@ -12,16 +12,10 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 # Fetch rules_nodejs so we can install our npm dependencies
-# http_archive(
-#     name = "build_bazel_rules_nodejs",
-#     sha256 = "5c86b055c57e15bf32d9009a15bcd6d8e190c41b1ff2fb18037b75e0012e4e7c",
-#     urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.26.0/rules_nodejs-0.26.0.tar.gz"],
-# )
-# Pull in commit that adds commonjs plugin to rollup_bundle
 http_archive(
     name = "build_bazel_rules_nodejs",
-    strip_prefix = "rules_nodejs-652ab8880cb799cd980a8c6644e4106131b4288e",
-    url = "https://github.com/gregmagolan/rules_nodejs/archive/652ab8880cb799cd980a8c6644e4106131b4288e.zip",
+    sha256 = "251a023b6c5c5c97db1bfe24652dc19dad05f4da68f8e1821d92d911fa3f4ef4",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.27.4/rules_nodejs-0.27.4.tar.gz"],
 )
 
 # Fetch sass rules for compiling sass files
