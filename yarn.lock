@@ -144,13 +144,6 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/upgrade@7.2.8":
-  version "7.2.8"
-  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-7.2.8.tgz#036e0fdfab9e961361337a9429f011e275cf98f3"
-  integrity sha512-NBneHJRsIWMA11s5XMFKGKp2epKD/jIIPEP3pBDul10+RXR1X+lYwjCeqfDcsBmRAeEtYPc0maOWddQSIVfzlA==
-  dependencies:
-    tslib "^1.9.0"
-
 "@bazel/bazel-darwin_x64@0.23.0":
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/@bazel/bazel-darwin_x64/-/bazel-darwin_x64-0.23.0.tgz#11f40d23d282e3034da5c223462f17924adc6c42"

@@ -22,7 +22,6 @@
     "@angular/bazel": "7.2.8",
     "@angular/compiler": "7.2.8",
     "@angular/compiler-cli": "7.2.8",
-    "@angular/upgrade": "7.2.8",
     "@bazel/bazel": "0.23.0",
     "@bazel/karma": "0.25.1",
     "@types/jasmine": "2.8.8",
