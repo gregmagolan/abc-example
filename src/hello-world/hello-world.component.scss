@@ -1,5 +1,5 @@
-$example-red: #ff0000;
+@import "src/styles/shared";
 
-h1 {
-  color: $example-red;
+.mood-icon {
+  margin: 1rem;
 }

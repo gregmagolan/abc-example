@@ -1,7 +1,7 @@
-import {DebugElement} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular/platform-browser-dynamic/testing';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {HelloWorldComponent} from './hello-world.component';
 import {HelloWorldModuleNgSummary} from './hello-world.module.ngsummary';
@@ -22,6 +22,7 @@ describe('BannerComponent (inline template)', () => {
     TestBed.configureTestingModule({
       declarations: [HelloWorldComponent],  // declare the test component
       aotSummaries: HelloWorldModuleNgSummary,
+      imports: [BrowserAnimationsModule],
     });
     TestBed.compileComponents();
   }));

@@ -8,25 +8,26 @@ load("@npm_angular_bazel//:index.bzl", "ng_module", "ng_package")
 sass_binary(
     name = "hello-world-styles",
     src = "hello-world.component.scss",
+    deps = ["//src/styles:shared"],
 )
 
 ng_module(
     name = "hello-world",
-    srcs = glob(
-        ["*.ts"],
-        exclude = ["*.spec.ts"],
-    ),
-    assets = [":hello-world-styles"],
+    srcs = [
+        "hello-world.component.ts",
+        "hello-world.module.ts",
+    ],
+    assets = [
+        ":hello-world.component.html",
+        ":hello-world-styles",
+    ],
     deps = [
+        "//src/material",
         "@npm//@angular/core",
+        "@npm//@angular/forms",
+        "@npm//@angular/material",
         "@npm//@types",
     ],
-)
-
-ng_package(
-    name = "npm_package",
-    entry_point = "src/hello-world/index.js",
-    deps = [":hello-world"],
 )
 
 ts_library(
@@ -46,15 +47,38 @@ ts_library(
 ts_web_test_suite(
     name = "test",
     srcs = [
+        "@npm//node_modules/@angular/animations:bundles/animations.umd.js",
+        "@npm//node_modules/@angular/animations:bundles/animations-browser.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-observers.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-collections.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-bidi.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-text-field.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-keycodes.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-coercion.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-platform.umd.js",
+        "@npm//node_modules/@angular/cdk:bundles/cdk-a11y.umd.js",
         "@npm//node_modules/@angular/common:bundles/common.umd.js",
+        "@npm//node_modules/@angular/common:bundles/common-http.umd.js",
         "@npm//node_modules/@angular/compiler:bundles/compiler.umd.js",
         "@npm//node_modules/@angular/compiler:bundles/compiler-testing.umd.js",
         "@npm//node_modules/@angular/core:bundles/core.umd.js",
         "@npm//node_modules/@angular/core:bundles/core-testing.umd.js",
+        "@npm//node_modules/@angular/forms:bundles/forms.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-core.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-button.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-card.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-form-field.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-icon.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-input.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-list.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-toolbar.umd.js",
+        "@npm//node_modules/@angular/material:bundles/material-divider.umd.js",
         "@npm//node_modules/@angular/platform-browser:bundles/platform-browser.umd.js",
         "@npm//node_modules/@angular/platform-browser:bundles/platform-browser-testing.umd.js",
+        "@npm//node_modules/@angular/platform-browser:bundles/platform-browser-animations.umd.js",
         "@npm//node_modules/@angular/platform-browser-dynamic:bundles/platform-browser-dynamic.umd.js",
         "@npm//node_modules/@angular/platform-browser-dynamic:bundles/platform-browser-dynamic-testing.umd.js",
+        "@npm//node_modules/@angular/forms:forms.ngsummary.js",
         "@npm//node_modules/tslib:tslib.js",
     ],
     bootstrap = [
