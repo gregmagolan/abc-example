@@ -55,14 +55,14 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/bazel@angular/bazel-builds#8.0.0-beta.8+f50928f":
-  version "8.0.0-beta.8"
-  resolved "https://codeload.github.com/angular/bazel-builds/tar.gz/028bfbf549e6f43d87538814c2967a68e6efab0b"
+"@angular/bazel@angular/bazel-builds#8.0.0-beta.9+0d04450":
+  version "8.0.0-beta.9"
+  resolved "https://codeload.github.com/angular/bazel-builds/tar.gz/ede928b3f680785e163f4b9cc2d4dda0bcb6a0d4"
   dependencies:
     "@angular-devkit/architect" "^0.13.4"
     "@angular-devkit/core" "^7.0.4"
     "@angular-devkit/schematics" "^7.3.0-rc.0"
-    "@bazel/typescript" "^0.27.4"
+    "@bazel/typescript" "^0.27.7"
     "@microsoft/api-extractor" "^7.0.21"
     "@schematics/angular" "^7.3.5"
     "@types/node" "6.0.84"
@@ -176,10 +176,10 @@
     "@bazel/bazel-linux_x64" "0.23.2"
     "@bazel/bazel-win32_x64" "0.23.2"
 
-"@bazel/karma@0.27.4":
-  version "0.27.4"
-  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.27.4.tgz#06c36515740f9d2cbcacb2783dd2f9b5c50ed386"
-  integrity sha512-6dIKxsktWaLMj1G7rV/6GCi4O6z75t57O+alD+WVThsKdqGdQ9PH6qRcw7VnUo+J9d6GA5Kr922b6XAE8m1q2g==
+"@bazel/karma@0.27.7":
+  version "0.27.7"
+  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.27.7.tgz#abe1cf48be97fbad84ad38e9d32b823e367b8d81"
+  integrity sha512-SlYtePQWoa1+xKMEZdp27n4WZsocfUaUR10p3jaZZ0uhOcoAvuOVTaG+sidUJCoVuF8s6IPjbSOGN4FWVgXUjg==
   dependencies:
     jasmine-core "2.8.0"
     karma "^4.0.0"
@@ -193,10 +193,10 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/typescript@^0.27.4":
-  version "0.27.4"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.27.4.tgz#412e438338675aeab34dcf5e57ed5e0705e8fed4"
-  integrity sha512-DvonqvUyiwgADRUMO4hpJlk/24LbBjPsNevPyHDKF3x2hH0IGH0NQ0MrulNHCY7xkg7vfMF4lLaHoCnuXhrVzA==
+"@bazel/typescript@^0.27.7":
+  version "0.27.7"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.27.7.tgz#ff2d6469357ff68faccc75976d435fec0175e988"
+  integrity sha512-Eeu42RM6Ss/se3Bdv+OBfY159N9uOlUZp4XHgZixq1PHwuohRDPIEdEnci/pe3TDsiY25YOi7hjemM90gu5ppg==
   dependencies:
     protobufjs "5.0.3"
     semver "5.6.0"
