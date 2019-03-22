@@ -7,7 +7,7 @@
       "dom",
       "es2015"
     ],
-    "module": "umd",
+    "module": "amd",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "types": []
