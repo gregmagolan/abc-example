@@ -76,6 +76,10 @@ ts_devserver(
         "@npm//node_modules/@angular/cdk:bundles/cdk-a11y.umd.js",
         "@npm//node_modules/tslib:tslib.js",
         ":rxjs_umd_modules",
+        "@npm//node_modules/@angular/material:icon/typings/index.ngfactory.js",
+        "@npm//node_modules/@angular/material:card/typings/index.ngfactory.js",
+        "@npm//node_modules/@angular/material:toolbar/typings/index.ngfactory.js",
+        "@npm//node_modules/@angular/material:form-field/typings/index.ngfactory.js",
     ],
     # Serve these files in addition to the JavaScript bundle
     # The corresponding <script> or <link> tags will be injected into the index_html
