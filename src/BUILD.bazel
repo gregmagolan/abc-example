@@ -77,7 +77,6 @@ ts_devserver(
         "@npm//node_modules/tslib:tslib.js",
         ":rxjs_umd_modules",
     ],
-    serving_path = "/bundle.min.js",
     # Serve these files in addition to the JavaScript bundle
     # The corresponding <script> or <link> tags will be injected into the index_html
     static_files = [
