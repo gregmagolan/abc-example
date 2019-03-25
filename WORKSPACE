@@ -14,9 +14,9 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 # Fetch rules_nodejs so we can install our npm dependencies
 http_archive(
     name = "build_bazel_rules_nodejs",
-    sha256 = "dd7a2dec14207e83232130a5bd9feea5c565f60418cd23b12537f8610a79e322",
-    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/330db078476d4226cf8dd342919f96fe72b6a210.zip"],
-    strip_prefix = "rules_nodejs-330db078476d4226cf8dd342919f96fe72b6a210",
+    sha256 = "ef8eaae24b107838678c843a6f26370490a1c584900e4437594e8a7457412122",
+    strip_prefix = "rules_nodejs-c59741168aca43eb7bcf64ff4800b519586f0c14",
+    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/c59741168aca43eb7bcf64ff4800b519586f0c14.zip"],
 )
 
 # Fetch sass rules for compiling sass files
